@@ -1,0 +1,75 @@
+{
+  "name": "LUCVOICE-XMD",
+  "description": "LUCVOICE-XMD - Advanced WhatsApp bot with QR pairing, session management, auto-reconnect, and express server",
+  "repository": "https://github.com/lukabrand/LUCVOICE-XMD",
+  "logo": "https://raw.githubusercontent.com/lukabrand/LUCVOICE-XMD/main/logo.png",
+  "keywords": [
+    "WhatsApp",
+    "bot",
+    "LUCVOICE-XMD",
+    "QR code",
+    "session",
+    "auto-reconnect",
+    "PM2",
+    "Node.js",
+    "Express",
+    "commands"
+  ],
+  "buildpacks": [
+    { "url": "heroku/nodejs" }
+  ],
+  "env": {
+    "OWNER_NAME": {
+      "description": "Bot owner name",
+      "value": "LUCVOICE-XMD"
+    },
+    "OWNER_NUMBER": {
+      "description": "Bot owner number (with country code)",
+      "value": "YOUR_NUMBER_HERE"
+    },
+    "BOT_NAME": {
+      "description": "Bot display name",
+      "value": "LUCVOICE-XMD"
+    },
+    "PREFIX": {
+      "description": "Command prefix",
+      "value": "."
+    },
+    "PUBLIC_MODE": {
+      "description": "Set bot mode: yes=public, no=private",
+      "value": "yes"
+    },
+    "SESSION_TYPE": {
+      "description": "Type of WhatsApp session (local/sessionweb)",
+      "value": "local"
+    },
+    "AUTO_RECONNECT": {
+      "description": "Enable automatic reconnection",
+      "value": "true"
+    },
+    "PORT": {
+      "description": "Port for Express server",
+      "value": "3000"
+    },
+    "IMAGE_MENU": {
+      "description": "Default image menu URL",
+      "value": "https://telegra.ph/file/0c225f7da5616cdcbec.jpg"
+    },
+    "PUBLIC_URL": {
+      "description": "Public URL for session (optional)",
+      "value": ""
+    }
+  },
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "standard-1X"
+    }
+  },
+  "addons": [
+    "heroku-postgresql:hobby-dev"
+  ],
+  "scripts": {
+    "postdeploy": "npm install && echo 'Deployment complete!'"
+  }
+}
