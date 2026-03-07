@@ -1,0 +1,7 @@
+app.get('/api/status', (req, res) => {
+  res.json({
+    status: client.info?.pushname ? "Bot is ready!" : "Waiting for QR scan...",
+    qr: "", // Optional: add QR base64 string here if needed
+    menuImage: process.env.IMAGE_MENU || "https://telegra.ph/file/0c225f7da5616cdcbec.jpg"
+  });
+});
