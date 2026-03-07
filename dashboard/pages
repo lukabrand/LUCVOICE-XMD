@@ -1,0 +1,46 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
+
+export default function Home() {
+  const [botStatus, setBotStatus] = useState("Loading...");
+  const [qr, setQr] = useState("");
+  const [menuImage, setMenuImage] = useState("");
+
+  useEffect(() => {
+    // Badilisha hapa na link ya backend yako (Heroku / Render)
+    const backendUrl = "https://lucvoice-xmd.herokuapp.com/api/status";
+
+    axios
+      .get(backendUrl)
+      .then((res) => {
+        setBotStatus(res.data.status);
+        setQr(res.data.qr || "");
+        setMenuImage(res.data.menuImage || "");
+      })
+      .catch((err) => {
+        console.error(err);
+        setBotStatus("Bot offline");
+      });
+  }, []);
+
+  return (
+    <div style={{ textAlign: "center", marginTop: "50px", fontFamily: "sans-serif" }}>
+      <h1>LUCVOICE-XMD Dashboard</h1>
+      <p>Status: <strong>{botStatus}</strong></p>
+
+      {qr && (
+        <div style={{ marginTop: "20px" }}>
+          <p>Scan QR Code:</p>
+          <img src={qr} alt="QR Code" width={300} />
+        </div>
+      )}
+
+      {menuImage && (
+        <div style={{ marginTop: "20px" }}>
+          <p>Menu Image:</p>
+          <img src={menuImage} alt="Menu Image" width={300} />
+        </div>
+      )}
+    </div>
+  );
+}
