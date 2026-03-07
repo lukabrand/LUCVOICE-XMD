@@ -1,0 +1,18 @@
+{
+  "noiseKey": {
+    "private": { "type": "Buffer", "data": "" },
+    "public": { "type": "Buffer", "data": "" }
+  },
+  "pairingEphemeralKeyPair": {
+    "private": { "type": "Buffer", "data": "" },
+    "public": { "type": "Buffer", "data": "" }
+  },
+  "signedIdentityKey": {
+    "private": { "type": "Buffer", "data": "" },
+    "public": { "type": "Buffer", "data": "" }
+  },
+  "registrationId": 0,
+  "advSecretKey": "",
+  "nextPreKeyId": 0,
+  "firstUnuploadedPreKeyId": 0
+}
