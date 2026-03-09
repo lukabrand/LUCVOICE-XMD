@@ -109,7 +109,7 @@
   "main": "Lucvoice.js",
   "type": "commonjs",
   "scripts": {
-    "start": "node Charles.js"
+    "start": "node Lucvoice.js"
   },
   "keywords": [
     "termux",
@@ -121,7 +121,7 @@
     "bot-md",
     "whatsapp-multi-device"
   ],
-  "author": "lucvoice",
+  "author": "LUCVOICE-XMD",
   "license": "ISC",
   "dependencies": {
     "@adiwajshing/keyed-db": "^0.2.4",
