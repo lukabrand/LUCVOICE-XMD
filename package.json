@@ -1,13 +1,13 @@
 {
-  "name": "lucvoice-bot",
+  "name": "LUCVOICE-XMD",
   "version": "1.0.0",
   "description": "WhatsApp bot using Baileys for automated messaging, commands, and session management.",
   "main": "index.js",
-  "author": "Your Name",
+  "author": "Lukas Simkonda",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/lucvoice-bot.git"
+    "url": "https://github.com/lukabrand/LUCVOICE-XMD.git"
   },
   "scripts": {
     "start": "node index.js",
@@ -33,6 +33,7 @@
     "bot",
     "baileys",
     "automation",
-    "lucvoice"
+    "lucvoice",
+    "LUCVOICE-XMD"
   ]
 }
