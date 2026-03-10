@@ -1,0 +1,21 @@
+# heroku.yml - Node.js WhatsApp Bot (LUCVOICE-XMD)
+
+build:
+  languages:
+    - nodejs
+
+  config:
+    # Node version
+    NODE_ENV: production
+    NODE_VERSION: 20.x
+
+run:
+  web: node index.js
+
+# Optional environment variables (set these on Heroku Dashboard)
+env:
+  SESSION_ID: ""          # Session string for WhatsApp
+  PREFIX: "."             # Bot command prefix
+  OWNER_NAME: "LUCVOICE-MD" # Your name
+  NUMERO_OWNER: "255768619068"  # Your phone number
+  BOT_NAME: "LUCVOICE-XMD"      # Bot name
