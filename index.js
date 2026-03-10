@@ -49,7 +49,7 @@ const  {addGroupToBanList,isGroupBanned,removeGroupFromBanList} = require("./bdd
 const {isGroupOnlyAdmin,addGroupToOnlyAdminList,removeGroupFromOnlyAdminList} = require("./bdd/onlyAdmin");
 //const //{loadCmd}=require("/framework/mesfonctions")
 let { reagir } = require(__dirname + "/framework/app");
-var session = conf.session.replace(/Zokou-MD-WHATSAPP-BOT;;;=>/g,"");
+var session = conf.session.replace(/LUCVOICE-XMD-WHATSAPP-BOT;;;=>/g,"");
 const prefixe = conf.PREFIXE;
 const more = String.fromCharCode(8206)
 const readmore = more.repeat(4001)
@@ -84,7 +84,7 @@ setTimeout(() => {
         const sockOptions = {
             version,
             logger: pino({ level: "silent" }),
-            browser: ['Heroku-bt', "safari", "1.0.0"],
+            browser: ['LUCVOICE-XMD', "safari", "1.0.0"],
             printQRInTerminal: true,
             fireInitQueries: false,
             shouldSyncHistoryMessage: true,
@@ -470,7 +470,7 @@ function mybotpic() {
                                    // txt += `message supprimé \n @${auteurMessage.split("@")[0]} rétiré du groupe.`;
                                     const gifLink = "https://raw.githubusercontent.com/djalega8000/Zokou-MD/main/media/remover.gif";
                                     var sticker = new Sticker(gifLink, {
-                                        pack: 'Zoou-Md',
+                                        pack: 'LUCVOICE-XMD',
                                         author: conf.OWNER_NAME,
                                         type: StickerTypes.FULL,
                                         categories: ['🤩', '🎉'],
@@ -566,9 +566,9 @@ function mybotpic() {
             };
             var txt = "bot detected, \n";
            // txt += `message supprimé \n @${auteurMessage.split("@")[0]} rétiré du groupe.`;
-            const gifLink = "https://raw.githubusercontent.com/djalega8000/Zokou-MD/main/media/remover.gif";
+            const gifLink = "https://raw.githubusercontent.com/djalega8000/LUCVOICE-XMD/main/media/remover.gif";
             var sticker = new Sticker(gifLink, {
-                pack: 'Kibore md',
+                pack: 'LUCVOICE-XMD',
                 author: conf.OWNER_NAME,
                 type: StickerTypes.FULL,
                 categories: ['🤩', '🎉'],
@@ -712,7 +712,7 @@ zk.ev.on('group-participants.update', async (group) => {
         const metadata = await zk.groupMetadata(group.id);
 
         if (group.action == 'add' && (await recupevents(group.id, "welcome") == 'on')) {
-            let msg = `*𝐿𝑈𝐶𝑉𝑂𝐼𝐶𝐸-𝑋𝑀𝐷. 𝑊𝐸𝐿𝐶𝑂𝑀𝐸 𝐼𝑁 𝑇𝐻𝐸 𝐺𝑅𝑂𝑈𝑃 𝑀𝐸𝑆𝑆𝐴𝐺𝐸*`;
+            let msg = `*𝐿𝑈𝐶𝑉𝑂𝐼𝐶𝐸-𝑋𝑀𝐷 𝑊𝐸𝐿𝐶𝑂𝑀𝐸 𝐼𝑁 𝑇𝐻𝐸 𝐺𝑅𝑂𝑈𝑃 𝑀𝐸𝑆𝑆𝐴𝐺𝐸*`;
             let membres = group.participants;
             for (let membre of membres) {
                 msg += ` \n]|I{•------»*𝐻𝐸𝑌* 🖐️ @${membre.split("@")[0]} 𝑊𝐸𝐿𝐶𝑂𝑀𝐸 𝑇𝑂 𝑂𝑈𝑅 𝐺𝑅𝑂𝑈𝑃. \n\n`;
