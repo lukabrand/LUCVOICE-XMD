@@ -31,7 +31,7 @@ zokou(
 
         const gitdata = `
 ╔═════════════════════════════❀
-          *✅ Welcome to 𝐂𝐇𝐔𝐆𝐀 𝐗𝐌𝐃✅*
+          *✅ Welcome to LUCVOICE XMD✅*
      📣 Support our channel: [WhatsApp Channel](https://whatsapp.com/channel/0029VatokI45EjxufALmY32X)
      
      *channel 2*
@@ -48,7 +48,7 @@ zokou(
 📆 *Release Date:* ${releaseDate}
 👤 *Owner:* ${repoInfo.owner}
 
-         *𝑝𝑜𝑤𝑒𝑟𝑒𝑑 𝑏𝑦 𝐂𝐇𝐔𝐆𝐀 𝐗𝐌𝐃🔥*
+         *𝑝𝑜𝑤𝑒𝑟𝑒𝑑 𝑏𝑦 LUCVOICE XMD🔥*
 ╚════════════════════════════
         `;
 
